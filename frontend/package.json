@@ -1,0 +1,94 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "E-commerce Demo Frontend (H5 + WeChat Mini Program)",
+
+  "templateInfo": {
+    "name": "default",
+    "typescript": true,
+    "css": "None",
+    "framework": "React"
+  },
+
+  "scripts": {
+    "prepare": "husky",
+
+    "dev:weapp": "taro build --type weapp --watch",
+    "dev:h5": "taro build --type h5 --watch",
+
+    "build:weapp": "taro build --type weapp",
+    "build:h5": "taro build --type h5",
+
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+
+    "stylelint": "stylelint \"src/**/*.scss\"",
+    "stylelint:fix": "stylelint \"src/**/*.scss\" --fix"
+  },
+
+  "browserslist": [
+    "defaults and fully supports es6-module",
+    "maintained node versions"
+  ],
+
+  "dependencies": {
+    "@babel/runtime": "^7.24.4",
+
+    "@tarojs/components": "4.1.11",
+    "@tarojs/helper": "4.1.11",
+    "@tarojs/plugin-framework-react": "4.1.11",
+    "@tarojs/plugin-platform-h5": "4.1.11",
+    "@tarojs/react": "4.1.11",
+    "@tarojs/runtime": "4.1.11",
+    "@tarojs/shared": "4.1.11",
+    "@tarojs/taro": "4.1.11",
+
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+
+  "devDependencies": {
+    "@babel/core": "^7.24.4",
+    "@babel/plugin-transform-class-properties": "7.25.9",
+    "@babel/preset-react": "^7.24.1",
+
+    "@tarojs/cli": "4.1.11",
+    "@tarojs/plugin-generator": "4.1.11",
+    "@tarojs/plugin-platform-weapp": "4.1.11",
+    "@tarojs/vite-runner": "4.1.11",
+
+    "@types/react": "^18.0.0",
+    "@vitejs/plugin-react": "^4.3.0",
+
+    "babel-preset-taro": "4.1.11",
+    "typescript": "^5.4.5",
+    "vite": "^4.2.0",
+
+    "eslint": "^8.57.0",
+    "eslint-config-taro": "4.1.11",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.4.0",
+
+    "postcss": "^8.5.6",
+    "sass": "^1.97.3",
+    "terser": "^5.30.4",
+
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2",
+
+    "stylelint": "^16.4.0",
+    "stylelint-config-standard": "^38.0.0"
+  },
+
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ],
+    "*.scss": [
+      "stylelint --fix"
+    ]
+  },
+
+  "author": ""
+}

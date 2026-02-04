@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: backend
+  # CORS configuration to allow frontend communication (development only)
+  # NOTE: do NOT use "*" together with allow-credentials: true — browsers will ignore the header.
+  web:
+    cors:
+      # explicitly allow local dev origins used by the frontend dev server
+      allowed-origins: "http://localhost:10086, http://127.0.0.1:10086"
+      allowed-methods: GET, POST, PUT, DELETE, OPTIONS
+      allowed-headers: "*"
+      allow-credentials: true
+
+# Server configuration
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+# Logging configuration
+logging:
+  level:
+    com.zxr.backend: INFO
+    org.springframework.web: DEBUG
+
+# Production note:
+# Set SPRING_WEB_CORS_ALLOWED-ORIGINS environment variable (comma-separated) or
+# override spring.web.cors.allowed-origins in a production profile with the
+# exact host(s) that should be permitted.

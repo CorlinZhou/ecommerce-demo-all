@@ -1,0 +1,92 @@
+/* CartDrawer styles are imported directly in the component */
+
+.page {
+    min-height: 100vh;
+    background: #f6f7f9;
+    padding-bottom: 120rpx;
+    font-size: 28rpx;
+    -webkit-font-smoothing: antialiased;
+}
+
+.product-list {
+    padding: 20rpx;
+}
+
+
+/* ===== bottom bar ===== */
+
+.bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 96rpx;
+    background: #ffffff;
+    border-top: 1px solid #e5e6eb;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24rpx;
+    box-sizing: border-box;
+}
+
+.bottom-bar .summary {
+    display: flex;
+    flex-direction: column;
+    font-size: 26rpx;
+    color: #333;
+}
+
+.bottom-bar .summary .price {
+    font-weight: bold;
+    color: #fa541c;
+    font-size: 30rpx;
+}
+
+.cart-btn {
+    background: #1677ff;
+    color: #fff;
+    padding: 16rpx 28rpx;
+    border-radius: 40rpx;
+    font-size: 28rpx;
+}
+
+.cart-btn.disabled {
+    background: #ccc;
+}
+
+
+/* ===== modal ===== */
+
+.modal-mask {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    width: 80%;
+    background: #fff;
+    border-radius: 16rpx;
+    padding: 32rpx;
+}
+
+.modal-content .title {
+    font-size: 32rpx;
+    font-weight: bold;
+}
+
+.modal-content .total {
+    margin-top: 16rpx;
+    font-size: 30rpx;
+    color: #fa541c;
+}
+
+.confirm-btn {
+    margin-top: 24rpx;
+    background: #1677ff;
+    color: #fff;
+}

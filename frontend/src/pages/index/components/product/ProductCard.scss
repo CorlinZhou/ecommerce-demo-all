@@ -1,0 +1,104 @@
+.product-card {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 16rpx;
+    padding: 20rpx;
+    margin-bottom: 16rpx;
+}
+
+.product-card.low-stock {
+    background: #fff1f0;
+    border: 2rpx solid #ffccc7;
+    border-radius: 16rpx;
+    box-shadow: 0 2rpx 8rpx rgba(255, 77, 79, 0.1);
+}
+
+.product-card.low-stock .meta .stock {
+    color: #ff4d4f;
+    font-weight: bold;
+    font-size: 24rpx;
+}
+
+.product-card.low-stock .counter .btn {
+    background-color: #ffccc7;
+    color: #ff4d4f;
+}
+
+.product-card.low-stock .counter .btn.disabled {
+    background-color: #ffccc7;
+    color: #ff8c82;
+}
+
+.product-card .index {
+    font-size: 24rpx;
+    color: #999;
+    margin-right: 12rpx;
+}
+
+.product-card .info {
+    flex: 1;
+}
+
+.product-card .name {
+    font-size: 30rpx;
+    font-weight: bold;
+    color: #333;
+}
+
+.product-card .meta {
+    margin-top: 6rpx;
+    display: flex;
+    gap: 16rpx;
+    font-size: 24rpx;
+}
+
+.product-card .meta .price {
+    font-weight: bold;
+    color: #333;
+}
+
+.product-card .meta .stock {
+    color: #888;
+}
+
+.product-card .counter {
+    display: flex;
+    align-items: center;
+}
+
+.product-card .btn {
+    width: 56rpx;
+    height: 56rpx;
+    border-radius: 28rpx;
+    background: #f2f3f5;
+    font-size: 32rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 56rpx;
+}
+
+.product-card .btn .btn-symbol,
+.product-card .btn .btn-text {
+    color: #333;
+    font-size: 32rpx;
+    line-height: 1;
+    font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+.product-card .btn.disabled {
+    background: #e5e6eb;
+    color: #aaa;
+}
+
+.product-card .btn.disabled .btn-symbol {
+    color: #aaa;
+}
+
+.product-card .qty {
+    margin: 0 16rpx;
+    font-size: 28rpx;
+    min-width: 32rpx;
+    text-align: center;
+}
