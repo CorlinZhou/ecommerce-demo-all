@@ -1,3 +1,5 @@
 export default definePageConfig({
-  navigationBarTitleText: 'Products'
+  navigationBarTitleText: 'Products',
+  // Declare components used in this page for on-demand injection
+  usingComponents: {}
 })

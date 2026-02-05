@@ -47,7 +47,9 @@
     "useApiHostProcess": true,
     "showStatusBar": true,
     "enableEngineNative": false,
-    "packageJsonPath": "package.json"
+    "packageJsonPath": "package.json",
+    "componentFramework": "glass-easel",
+    "useIsolateContext": true
   },
   "compileType": "miniprogram",
   "libVersion": "2.19.4",
@@ -72,7 +74,9 @@
       "list": []
     },
     "miniprogram": {
-      "list": []
+      "list": [],
+      "enable-mp-component": true,
+      "useCompilerModules": true
     }
   }
 }

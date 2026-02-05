@@ -47,6 +47,10 @@ export default defineConfig<'vite'>(async (merge, {}) => {
           }
         }
       },
+      // Enable component on-demand injection for WeChat Mini Program
+      usingComponents: true,
+      // Additional settings for code quality compliance
+      enableExtractPages: true,
     },
     h5: {
       publicPath: '/',

@@ -41,12 +41,12 @@ export default function CartDrawer(props: Props) {
   return (
     <View
       className="cart-mask"
-      onTap={onClose}
+      onClick={onClose}
       style={{ position: 'fixed', left: 0, right: 0, top: 0, bottom: 0, background: 'rgba(0,0,0,0.45)', zIndex: 9999 }}
     >
       <View
         className="cart-panel"
-        onTap={e => e.stopPropagation()}
+        onClick={e => e.stopPropagation()}
         style={{
           position: 'absolute',
           left: 0,
@@ -64,7 +64,7 @@ export default function CartDrawer(props: Props) {
         {/* header */}
         <View className="cart-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: 24, paddingBottom: 24, paddingLeft: 24, paddingRight: 24, borderBottomWidth: 1, borderBottomColor: '#f0f0f0', borderBottomStyle: 'solid' }}>
           <Text className="title">🛒 Shopping Cart</Text>
-          <View className="close-btn" onTap={onClose} role="button" style={{ padding: 12 }}>
+          <View className="close-btn" onClick={onClose} role="button" style={{ padding: 12 }}>
             <Text className="close-icon">×</Text>
           </View>
         </View>
@@ -98,7 +98,7 @@ export default function CartDrawer(props: Props) {
 
           <View
             className={`submit-btn ${submitting || totalQty === 0 ? 'disabled' : ''}`}
-            onTap={() => {
+            onClick={() => {
               if (!submitting && totalQty > 0) {
                 onSubmit()
               }

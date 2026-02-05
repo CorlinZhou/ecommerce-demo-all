@@ -20,7 +20,7 @@ export default function BottomBar({
 
       <View
         className={`cart-btn ${totalQty === 0 ? 'disabled' : ''}`}
-        onTap={() => totalQty > 0 && onOpenCart()}
+        onClick={() => totalQty > 0 && onOpenCart()}
       >
         🛒 Cart
       </View>
