@@ -34,14 +34,14 @@ export default function ProductCard({
       <View className="counter">
         <View
           className={`btn ${quantity === 0 ? 'disabled' : ''}`}
-          onClick={() => onRemove(product)}
+          onTap={() => onRemove(product)}
         >
           <Text className="btn-symbol">-</Text>
         </View>
         <Text className="qty">{quantity}</Text>
         <View
           className={`btn ${product.stock === 0 ? 'disabled' : ''}`}
-          onClick={() => onAdd(product)}
+          onTap={() => onAdd(product)}
         >
           <Text className="btn-symbol">+</Text>
         </View>

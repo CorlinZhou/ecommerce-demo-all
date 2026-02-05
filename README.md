@@ -1,4 +1,4 @@
-# ELC E-commerce Demo
+# E-commerce Demo
 
 A modern e-commerce demonstration project built with a monorepo architecture, showcasing a complete full-stack solution.
 
@@ -20,7 +20,7 @@ A modern e-commerce demonstration project built with a monorepo architecture, sh
 
 ```
 ├── backend/                 # Spring Boot backend application
-│   ├── src/main/java/com/elc/backend/  # Backend source code
+│   ├── src/main/java/com/zxr/backend/  # Backend source code
 │   ├── src/main/resources/   # Backend configuration files
 │   ├── pom.xml               # Maven project configuration
 │   └── mvnw                  # Maven wrapper
@@ -285,6 +285,5 @@ java -jar backend/target/backend-0.0.1-SNAPSHOT.jar
 - [TypeScript](https://www.typescriptlang.org/) - Type safety
 
 ## Contact
-zhouxr@shinetechsoftware.com
 
 For any questions or suggestions, please open an issue or submit a pull request.

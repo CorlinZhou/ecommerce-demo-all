@@ -1,6 +1,6 @@
 import { View, Text, Button } from '@tarojs/components'
 import { OrderConfirmation } from '@/types/api'
-import './OrderModal.scss' 
+import './OrderModal.scss'
 
 interface Props {
   data: OrderConfirmation | null
@@ -15,7 +15,7 @@ export default function OrderModal({ data, onClose }: Props) {
       <View className="modal-content" onTap={e => e.stopPropagation()}>
         <View className="modal-header">
           <Text className="title">Order Success</Text>
-          <View className="close-btn" onClick={onClose} role="button" style={{ padding: 12 }}>
+          <View className="close-btn" onTap={onClose} role="button" style={{ padding: 12 }}>
             <Text className="close-icon">×</Text>
           </View>
         </View>
@@ -31,7 +31,7 @@ export default function OrderModal({ data, onClose }: Props) {
           </View>
         </View>
 
-        <Button className="confirm-btn" onClick={onClose}>
+        <Button className="confirm-btn" onTap={onClose}>
           OK
         </Button>
       </View>

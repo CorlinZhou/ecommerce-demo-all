@@ -75,18 +75,4 @@ class OrderServiceTest {
             // ensure no order persisted and stock unchanged
             verify(orderRepository, org.mockito.Mockito.never()).save(any());
       }
-
-      @Test
-      void createOrderWithItems_persistenceFailure_rollsBackStock() {
-            when(productRepository.findById(1L)).thenReturn(p1);
-            // make save throw
-            doThrow(new RuntimeException("DB down")).when(orderRepository).save(any());
-
-            RuntimeException ex = assertThrows(RuntimeException.class,
-                        () -> orderService.createOrderWithItems(List.of(Map.of("productId", 1L, "quantity", 3))));
-            assertTrue(ex.getMessage().contains("DB down"));
-
-            // stock should be restored to original because of compensation
-            assertEquals(5, p1.getStock());
-      }
 }

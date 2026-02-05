@@ -29,21 +29,20 @@ export default function CartItem({ item, product, hasStockError, onAdd, onRemove
       </View>
 
       <View className="counter" style={{ display: 'flex', alignItems: 'center' }}>
-        <View className="btn" onClick={() => onRemove(product)} onTap={() => onRemove(product)} style={{ width: '56rpx', height: '56rpx', borderRadius: '28rpx', background: '#f2f3f5', color: '#333', fontSize: '28rpx', textAlign: 'center', lineHeight: '56rpx', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <Text className="btn-symbol">-</Text>
-        </View>
+          <View className="btn" onTap={() => onRemove(product)} style={{ width: '56rpx', height: '56rpx', borderRadius: '28rpx', background: '#f2f3f5', color: '#333', fontSize: '28rpx', textAlign: 'center', lineHeight: '56rpx', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <Text className="btn-symbol">-</Text>
+          </View>
 
-        <Text className="qty" style={{ margin: '0 20rpx', fontSize: '28rpx', minWidth: '40rpx', textAlign: 'center', fontWeight: 'bold' }}>{item.quantity}</Text>
+          <Text className="qty" style={{ margin: '0 20rpx', fontSize: '28rpx', minWidth: '40rpx', textAlign: 'center', fontWeight: 'bold' }}>{item.quantity}</Text>
 
-        <View
-          className={`btn ${product.stock === 0 ? 'disabled' : ''}`}
-          onClick={() => product.stock > 0 && onAdd(product)}
-          onTap={() => product.stock > 0 && onAdd(product)}
-          style={{ width: '56rpx', height: '56rpx', borderRadius: '28rpx', background: product.stock === 0 ? '#ffccc7' : '#f2f3f5', color: product.stock === 0 ? '#ff4d4f' : '#333', fontSize: '28rpx', textAlign: 'center', lineHeight: '56rpx', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-        >
-          <Text className="btn-symbol">+</Text>
+          <View
+            className={`btn ${product.stock === 0 ? 'disabled' : ''}`}
+            onTap={() => product.stock > 0 && onAdd(product)}
+            style={{ width: '56rpx', height: '56rpx', borderRadius: '28rpx', background: product.stock === 0 ? '#ffccc7' : '#f2f3f5', color: product.stock === 0 ? '#ff4d4f' : '#333', fontSize: '28rpx', textAlign: 'center', lineHeight: '56rpx', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+          >
+            <Text className="btn-symbol">+</Text>
+          </View>
         </View>
-      </View>
     </View>
   )
 }
